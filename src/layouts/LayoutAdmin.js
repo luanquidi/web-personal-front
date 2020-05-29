@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { Layout } from "antd";
 
 // Components
 import MenuTop from "../components/Admin/MenuTop";
 import MenuSider from "../components/Admin/MenuSider";
+import AdminSignIn from "../pages/Admin/SignIn";
+import useAuth from "../hooks/useAuth";
 
 // Styles
 import "./LayoutAdmin.scss";
@@ -14,30 +16,44 @@ const LayoutAdmin = (props) => {
   const { Header, Content, Footer } = Layout;
   const [menuCollapsed, setMenuCollapsed] = useState(false);
 
-  return (
-    <>
-      <Layout>
-        <MenuSider menuCollapsed={menuCollapsed} />
-        <Layout
-          className="layout-admin"
-          style={{ marginLeft: menuCollapsed ? "80px" : "200px" }}
-        >
-          <Header className="layout-admin__header">
-            <MenuTop
-              menuCollapsed={menuCollapsed}
-              setMenuCollapsed={setMenuCollapsed}
-            />
-          </Header>
+  const { user, isLoading } = useAuth();
 
-          <Content className="layout-admin__content">
-            <LoadRoutes routes={routes} />
-          </Content>
+  if (!user && !isLoading) {
+    return (
+      <>
+        <Route path="/admin/login" component={AdminSignIn} />
+        <Redirect to="/admin/login" />
+      </>
+    );
+  }
+  if (user && !isLoading) {
+    return (
+      <>
+        <Layout>
+          <MenuSider menuCollapsed={menuCollapsed} />
+          <Layout
+            className="layout-admin"
+            style={{ marginLeft: menuCollapsed ? "80px" : "200px" }}
+          >
+            <Header className="layout-admin__header">
+              <MenuTop
+                menuCollapsed={menuCollapsed}
+                setMenuCollapsed={setMenuCollapsed}
+              />
+            </Header>
 
-          <Footer className="layout-admin__footer">Footer</Footer>
+            <Content className="layout-admin__content">
+              <LoadRoutes routes={routes} />
+            </Content>
+
+            <Footer className="layout-admin__footer">Footer</Footer>
+          </Layout>
         </Layout>
-      </Layout>
-    </>
-  );
+      </>
+    );
+  }
+
+  return null;
 };
 
 const LoadRoutes = ({ routes }) => {

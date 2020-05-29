@@ -1,6 +1,7 @@
 import React from "react";
 import LuisLogo from "../../../assets/img/png/logo.png";
 import { Icon, Button } from "antd";
+import { logout } from "../../../api/auth";
 
 // Styles
 import "./MenuTop.scss";
@@ -12,6 +13,10 @@ const MenuTop = (props) => {
     setMenuCollapsed(!menuCollapsed);
   };
 
+  const closeSession = () => {
+    logout();
+    window.location.reload();
+  }
   return (
     <div className="menu-top">
       <div className="menu-top__left">
@@ -25,7 +30,7 @@ const MenuTop = (props) => {
         </Button>
       </div>
       <div className="menu-top__right">
-        <Button type="link" onClick={() => console.log("SignOut...")}>
+        <Button type="link" onClick={closeSession}>
           <Icon type="poweroff" />
         </Button>
       </div>
