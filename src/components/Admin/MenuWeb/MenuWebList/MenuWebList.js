@@ -32,11 +32,13 @@ const MenuWebList = ({ menu, setReloadMenuWeb }) => {
   useEffect(() => {
     const listItem = [];
 
-    menu.forEach((item) => {
-      listItem.push({
-        content: <MenuItem item={item} setReloadMenuWeb={setReloadMenuWeb} openEditModal={openEditModal} />,
+    if(menu){
+      menu.forEach((item) => {
+        listItem.push({
+          content: <MenuItem item={item} setReloadMenuWeb={setReloadMenuWeb} openEditModal={openEditModal} />,
+        });
       });
-    });
+    }
 
     setListItems(listItem);
   }, [menu]);
@@ -80,9 +82,12 @@ const MenuWebList = ({ menu, setReloadMenuWeb }) => {
           Crear menú
         </Button>
       </div>
-      <div className="menu-web-list__items">
-        <DragSortableList items={listItems} onSort={onSort} type="vertical" />
-      </div>
+      {!menu ? (<h1>No hay menus</h1>) : (
+
+        <div className="menu-web-list__items">
+          <DragSortableList items={listItems} onSort={onSort} type="vertical" />
+        </div>
+      )}
       <Modal
         title={modalTitle}
         isVisible={isVisibleModal}
