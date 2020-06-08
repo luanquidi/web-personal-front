@@ -11,6 +11,7 @@ import "./Users.scss";
 const Users = () => {
   const [usersActive, setUsersActive] = useState([]);
   const [usersInactive, setUsersInactive] = useState([]);
+  const [reloadUsers, setReloadUsers] = useState(false);
 
   const token = getAccessToken();
 
@@ -22,11 +23,12 @@ const Users = () => {
     getActiveUsersApi(token, false).then((res) => {
       setUsersInactive(res.users);
     });
-  }, [token]);
+    setReloadUsers(false);
+  }, [token, reloadUsers]);
 
   return (
     <div className="users">
-      <ListUsers usersActive={usersActive} usersInactive={usersInactive} />
+      <ListUsers usersActive={usersActive} usersInactive={usersInactive} setReloadUsers={setReloadUsers} />
     </div>
   );
 };

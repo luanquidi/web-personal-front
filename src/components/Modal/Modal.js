@@ -5,7 +5,7 @@ import { Modal as ModalAnt } from "antd";
 import "./Modal.scss";
 
 const Modal = (props) => {
-  const { children, title, isVisible, setIsVisible } = props;
+  const { children, title, isVisible, setIsVisible, ...other } = props;
 
   return (
     <ModalAnt
@@ -14,6 +14,7 @@ const Modal = (props) => {
       visible={isVisible}
       onCancel={() => setIsVisible(false)}
       footer={false}
+      {...other}
     >
       {children}
     </ModalAnt>

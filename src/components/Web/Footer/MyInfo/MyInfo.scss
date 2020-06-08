@@ -1,0 +1,19 @@
+@import "../../../../scss/index.scss";
+.my-info {
+    text-align: center;
+  img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: $primary-color-dark;
+    margin-bottom: 20px;
+    span {
+      color: $primary-color;
+    }
+  }
+  .social-links {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}

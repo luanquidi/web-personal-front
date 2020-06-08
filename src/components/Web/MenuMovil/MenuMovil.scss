@@ -1,0 +1,45 @@
+@import "../../../scss/index.scss";
+
+.menu-top-movil {
+  position: relative;
+  top: 0px;
+  background-color: $background-dark-web;
+  border: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  li {
+    border: 0 !important;
+
+    a {
+      color: #fff !important;
+      font-weight: bold;
+
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+  }
+  &__logo {
+    padding: 10px;
+    img {
+      width: 100px;
+    }
+  }
+  
+  @keyframes rotate360 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  img {
+    animation: 2s rotate360 infinite linear;
+  }
+}
+
+.is-active {
+  span {
+    color : $primary-color !important;
+  }
+}

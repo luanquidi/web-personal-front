@@ -1,10 +1,9 @@
 import React from 'react';
+import Error from '../components/Web/Error/Error';
 
 const Error404 = () => {
     return ( 
-        <>
-            <h1>Error 404 - Página no encontrada</h1>
-        </>
+        <Error />
     );
 }
  
