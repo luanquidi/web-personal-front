@@ -81,7 +81,7 @@ const LoginForm = () => {
 
         clearForm();
         // return <Redirect from="/admin/login" to='/admin' />
-        window.location.href = '/admin';
+        window.location.href = '/#/admin';
       }
     }
   };
