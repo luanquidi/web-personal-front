@@ -15,7 +15,7 @@ const MainBanner = () => {
               Conoce acerca de <span>UpDev</span> <br /> Tecnología web y móvil
             </h2>
             <h3>
-              Nos apaciona el desarrollo y además lo ejercemos con un
+              Nos apaciona el desarrollo, además lo ejercemos con un
               conocimiento actualizado
             </h3>
           </Col>

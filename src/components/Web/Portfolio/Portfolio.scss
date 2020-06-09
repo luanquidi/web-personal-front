@@ -11,6 +11,9 @@
 
     h2 {
       color: $font-light;
+      span {
+        color: $primary-color;
+      }
     }
   }
   &__container {
@@ -64,9 +67,9 @@
       margin-top: 50px;
       color: $primary-color-dark;
       span {
-          font-style: italic;
-          color: #fff;
-          text-align: justify !important;
+        font-style: italic;
+        color: #fff;
+        text-align: justify !important;
       }
     }
     padding: 20px;
@@ -79,7 +82,7 @@
     &__container {
       display: block;
     }
-    &__header{
+    &__header {
       border: 0;
     }
     &__description {

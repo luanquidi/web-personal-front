@@ -1,25 +1,17 @@
 import React from "react";
 import AcademyLogo from "../../../../assets/img/png/academy.png";
+import Web from "../../../../assets/img/logos/web.png";
 // Styles
 import "./PresentationCourses.scss";
 
 const PresentationCourses = () => {
   return (
     <div className="presentation-courses">
-      <img src={AcademyLogo} alt="UpDev" />
+      <img src={Web} alt="UpDev" />
       <p>
-        Es un hecho establecido hace demasiado tiempo que un lector se distraerá
-        con el contenido del texto de un sitio mientras que mira su diseño. El
-        punto de usar Lorem Ipsum es que tiene una distribución más o menos
-        normal de las letras, al contrario de usar textos como por ejemplo
-        "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un
-        español que se puede leer. Muchos paquetes de autoedición y editores de
-        páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer
-        una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web
-        que usan este texto si se encuentran en estado de desarrollo. Muchas
-        versiones han evolucionado a través de los años, algunas veces por
-        accidente, otras veces a propósito (por ejemplo insertándole humor y
-        cosas por el estilo).
+        Apartado de sitios web que integrantes del equipo han realizado con
+        diferentes tecnologías, te invitamos a que le eches un vistazo para que notes el avance que hemos tenido, cada día
+        aprendemos y entendemos cuales son las mejores tecnologías a implementar para ofrecer una buena experiencia al usuario.
       </p>
     </div>
   );

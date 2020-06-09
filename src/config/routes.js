@@ -78,7 +78,7 @@ const routes = [
         component: Contact,
       },
       {
-        path: "/courses",
+        path: "/sitios",
         exact: true,
         component: Courses,
       },

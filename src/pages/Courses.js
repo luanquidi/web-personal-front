@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { notification, Row, Col, Spin } from "antd";
+import { notification, Row, Col, Spin} from "antd";
 import PresentationCourses from "../components/Web/Courses/PresentationCourses/PresentationCourses";
 import CoursesList from "../components/Web/Courses/CoursesList/CoursesList";
 import { getCoursesApi } from "../api/course";
 import { Helmet } from "react-helmet";
+import Site from "../components/Web/Site/Site";
 
 const Courses = () => {
   const [courses, setCourses] = useState(null);
@@ -35,15 +36,15 @@ const Courses = () => {
         <Col md={4} />
         <Col md={16}>
           <PresentationCourses />
-
-          {!courses ? (
+          <Site />
+          {/* {!courses ? (
             <Spin
               tip="Cargando cursos"
               style={{ textAlign: "center", width: "100%", padding: "20px" }}
             />
           ) : (
             <CoursesList courses={courses} />
-          )}
+          )} */}
         </Col>
         <Col md={4} />
       </Row>

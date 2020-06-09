@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Row, Col, Card, Button, Rate, notification } from "antd";
 import { getCourseUdemyApi } from "../../../../api/course";
 import "./CoursesList.scss";
+import CLAVE from '../../../../assets/img/logos/clave.jpeg';
 
 // Style
 const CoursesList = ({ courses }) => {
@@ -39,7 +40,46 @@ function Course({ course }) {
       });
   }, [courseData]);
 
-  if (!courseData) return null;
+  if (!courseData) {
+    return (
+      <>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopenner noreferrer"
+          onClick={(e) => e.preventDefault()}
+        >
+          <Card
+            cover={
+              <img src={CLAVE} alt="Clave Mar" />
+            }
+          >
+            <Card.Meta
+              title="Clave mar"
+              description="Pagina web restaurante de comida de mar Clave Mar"
+            />
+            <a
+              type="primary"
+              target="_blank"
+              rel="noopenner noreferrer"
+              style={{ width: "100%", marginTop: "30px" }}
+              href="http://laclavedelmar.com/"
+            >
+              Visitar
+            </a>
+            <div className="courses-list__course-footer">
+              {/* <span>
+                {course.price ? `${course.price} $` : courseData.price}
+              </span> */}
+              <div>
+                <Rate disabled defaultValue={5} />
+              </div>
+            </div>
+          </Card>
+        </a>
+      </>
+    );
+  }
 
   return (
     <a

@@ -15,7 +15,7 @@ const Portfolio = () => {
   return (
     <Row className="portfolio">
       <Col md={24} className="portfolio__title" data-aos="flip-left">
-        <h2>UpDev Team</h2>
+        <h2><span>UpDev</span> Team</h2>
       </Col>
       <Col md={4}></Col>
       <Col md={16} data-aos="fade-down-left">

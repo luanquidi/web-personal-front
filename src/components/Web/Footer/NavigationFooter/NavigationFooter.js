@@ -24,12 +24,12 @@ function ListNavigationLeft() {
   return (
     <ul>
       <li>
-        <a href="#">
-          <Icon type="user" />
-          Cursos Online
-        </a>
+        <Link to="/blog">
+          <Icon type="message" />
+          Blog
+        </Link>
       </li>
-      <li>
+      {/* <li>
         <Link to={"/contact"}>
           <Icon type="hdd" /> Desarrollo web
         </Link>
@@ -43,7 +43,7 @@ function ListNavigationLeft() {
         <Link to={"/user"}>
           <Icon type="right" /> Desarrollo web
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 }
@@ -52,12 +52,12 @@ function ListNavigationRight() {
   return (
     <ul>
       <li>
-        <a href="#">
-          <Icon type="book" />
-          Cursos Online
-        </a>
+        <Link to="/sitios">
+          <Icon type="global" />
+          Sitios Web
+        </Link>
       </li>
-      <li>
+      {/* <li>
         <Link to={"/contact"}>
           <Icon type="code" /> Desarrollo web
         </Link>
@@ -71,7 +71,7 @@ function ListNavigationRight() {
         <Link to={"/blog"}>
           <Icon type="right" /> Desarrollo web
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 }
