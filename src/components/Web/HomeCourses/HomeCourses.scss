@@ -16,72 +16,68 @@
 
   .row-courses {
     .ant-col {
+      
       padding: 15px !important;
     }
-    .first-image {
+    // .first-image {
+    //   a {
+    //     img {
+    //       width: 112px !important;
+    //     }
+    //   }
+    // }
+    // .last-image {
+    //   a {
+    //     img {
+    //       width: 112px !important;
+    //     }
+    //   }
+    // }
+    .net-image {
       a {
         img {
-          width: 112px;
-        }
-      }
-    }
-    .last-image {
-      a {
-        img {
-          width: 112px;
-        }
-      }
-    }
-    .net-image{
-      a {
-        // padding: 10px !important;
-        // padding-left: 20px;
-        img {
-          width: 250px;
-          margin-bottom: 33px;
+          margin-bottom: 0px;
         }
         .ant-card-body {
           margin-bottom: 0px;
         }
       }
     }
-    .mysql-image{
-      a {
-        img {
-          width: 150px;
-          margin-bottom: 26px;
-        }
-        .ant-card-body {
-          margin-bottom: 0px;
-        }
-      }
-    }
-    .laravel-image{
-      a {
-        img {
-          width: 150px;
-          margin-bottom: 26px;
-        }
-        .ant-card-body {
-          margin-bottom: 0px;
-        }
-      }
-    }
-    .node-image{
-      a {
-        img {
-          width: 150px;
-          margin-bottom: 26px;
-        }
-        .ant-card-body {
-          margin-bottom: 0px;
-        }
-      }
-    }
+    // .mysql-image {
+    //   a {
+    //     img {
+    //       margin-bottom: 26px;
+    //     }
+    //     .ant-card-body {
+    //       margin-bottom: 0px;
+    //     }
+    //   }
+    // }
+    // .laravel-image {
+    //   a {
+    //     img {
+    //       margin-bottom: 26px;
+    //     }
+    //     .ant-card-body {
+    //       margin-bottom: 0px;
+    //     }
+    //   }
+    // }
+    // .node-image {
+    //   a {
+    //     text-align: center !important;
+    //     img {
+    //       margin-bottom: 26px;
+    //     }
+    //     .ant-card-body {
+    //       margin-bottom: 0px;
+    //     }
+    //   }
+    // }
   }
 
   &__card {
-    min-height: 288px;
+    min-height: 354px !important;
     border: 0;
     background-color: $background-dark-light-web;
     border-radius: 10px;
@@ -90,15 +86,15 @@
     -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
     .ant-card-cover {
-      display: flex;
-      justify-content: center;
-      // min-height: 116px;
+      // display: flex;
+      // justify-content: center;
       img {
-        width: 150px;
-        padding-top: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
+        min-height: 172px;
+        // width: 150px !important;
+        // padding-top: 20px;
+        // padding-left: 10px;
+        // padding-right: 10px;
+        // padding-bottom: 10px;
       }
     }
 
@@ -150,6 +146,66 @@
         color: $primary-color;
         border: 1px solid $font-light;
       }
+    }
+  }
+}
+
+@media (max-width: 764px) {
+  .home-courses {
+    .row-courses {
+      .ant-col {
+        a {
+          img {
+            // width: 150px !important;
+            // margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1734px) {
+  .home-courses {
+    .row-courses {
+      .net-image{
+        a {
+          img {
+            // margin-bottom: 18px;
+            height: 191px;
+          }
+          .ant-card-body {
+            margin-bottom: 0px;
+          }
+        }
+        
+
+      }
+      .last-image{
+        a {
+          img {
+            // margin-bottom: 18px;
+            height: 191px;
+          }
+          .ant-card-body {
+            margin-bottom: 0px;
+          }
+        }
+        
+
+      }
+      // .react-image{
+      //   a {
+      //     img {
+      //       // margin-bottom: 18px;
+      //       height: 172px;
+      //     }
+      //     .ant-card-body {
+      //       margin-bottom: 0px;
+      //     }
+      //   }
+        
+
+      // }
     }
   }
 }

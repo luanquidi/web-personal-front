@@ -72,6 +72,17 @@
         text-align: justify !important;
       }
     }
+    h5 {
+      color: $primary-color;
+      font-size: 16px;
+    }
+    span {
+      color: $font-light;
+      font-weight: normal;
+      span {
+        font-weight: bold;
+      }
+    }
     padding: 20px;
     text-align: center;
   }

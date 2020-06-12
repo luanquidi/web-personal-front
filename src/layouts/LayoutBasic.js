@@ -29,7 +29,6 @@ const LayoutBasic = (props) => {
     );
   }
 
-
   return (
     <>
       <Row gutter={24} className="layout-row">

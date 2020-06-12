@@ -104,3 +104,12 @@
   background: rgba(0, 0, 0, 0.3);
   top: 0px;
 }
+
+.video-footer{
+  div {
+    p {
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+}

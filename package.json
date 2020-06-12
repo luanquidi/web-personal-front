@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@tinymce/tinymce-react": "^3.6.0",
+    "a11y-react-emoji": "^1.1.2",
     "antd": "^3.26.17",
     "aos": "^3.0.0-beta.6",
     "jwt-decode": "^2.2.0",
